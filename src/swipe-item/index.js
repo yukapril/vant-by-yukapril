@@ -30,7 +30,14 @@ export default createComponent({
       }
 
       if (this.offset) {
-        style.transform = `translate${vertical ? 'Y' : 'X'}(${this.offset}px)`;
+        // 尝试修复 iOS 轮播卡顿问题 by yukapril
+        if (vertical) {
+          // Y
+          style.transform = `translate3D(0, ${this.offset}px, 0)`;
+        } else {
+          // X
+          style.transform = `translate3D(${this.offset}px, 0, 0)`;
+        }
       }
 
       return style;
