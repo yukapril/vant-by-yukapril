@@ -126,8 +126,16 @@ export default createComponent({
     trackStyle() {
       const style = {
         transitionDuration: `${this.swiping ? 0 : this.duration}ms`,
-        transform: `translate${this.vertical ? 'Y' : 'X'}(${this.offset}px)`,
       };
+
+      // 尝试修复 iOS 轮播卡顿问题 by yukapril
+      if (this.vertical) {
+        // Y
+        style.transform = `translate3D(0, ${this.offset}px, 0)`;
+      } else {
+        // X
+        style.transform = `translate3D(${this.offset}px, 0, 0)`;
+      }
 
       if (this.size) {
         const mainAxis = this.vertical ? 'height' : 'width';

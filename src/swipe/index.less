@@ -5,6 +5,12 @@
   overflow: hidden;
   // https://github.com/vant-ui/vant/issues/9931
   transform: translateZ(0);
+  // 尝试修复 iOS 轮播卡顿问题 by yukapril
+  // https://www.shuzhiduo.com/A/gVdnWEGazW/
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   cursor: grab;
   user-select: none;
 
