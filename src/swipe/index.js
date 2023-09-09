@@ -126,6 +126,8 @@ export default createComponent({
     trackStyle() {
       const style = {
         transitionDuration: `${this.swiping ? 0 : this.duration}ms`,
+        transformStyle: 'preserve-3d',
+        backfaceVisibility: 'hidden',
       };
 
       // 尝试修复 iOS 轮播卡顿问题 by yukapril

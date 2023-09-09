@@ -29,6 +29,9 @@ export default createComponent({
         style[vertical ? 'height' : 'width'] = `${size}px`;
       }
 
+      style.transformStyle = 'preserve-3d';
+      style.backfaceVisibility = 'hidden';
+
       if (this.offset) {
         // 尝试修复 iOS 轮播卡顿问题 by yukapril
         if (vertical) {

@@ -229,6 +229,8 @@ export default createComponent({
 
   render() {
     const wrapperStyle = {
+      transformStyle: 'preserve-3d',
+      backfaceVisibility: 'hidden',
       transform: `translate3d(${this.offset}px, 0, 0)`,
       transitionDuration: this.dragging ? '0s' : '.6s',
     };
