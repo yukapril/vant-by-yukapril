@@ -1,6 +1,6 @@
 {
   "name": "vant-by-yukapril",
-  "version": "2.13.0-beta.1",
+  "version": "2.13.2-beta.1",
   "description": "Mobile UI Components built on Vue",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -16,7 +16,7 @@
     "tag": "latest-v2"
   },
   "publishConfig": {
-    "registry": "http://nexus.unicompayment.com/repository/npm-hosted/"
+    "registry": "https://registry.npmjs.org/"
   },
   "scripts": {
     "bootstrap": "yarn || npm i",
@@ -57,7 +57,7 @@
   "license": "MIT",
   "dependencies": {
     "@babel/runtime": "7.x",
-    "@vant/icons": "^3.0.0",
+    "@vant/icons": "^3.0.2",
     "@vant/popperjs": "^1.1.0",
     "@vue/babel-helper-vue-jsx-merge-props": "^1.0.0",
     "vue-lazyload": "1.2.3"
