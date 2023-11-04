@@ -159,6 +159,37 @@ Toast.clear = (all) => {
   }
 };
 
+// Toast loading 队列模式
+// by yukapril 2023-11-4
+// 每次 Toast.queueLoading()，计数器 +1
+// 每次 Toast.queueClear()，计数器 -1
+// 如果计数器超过 0，则显示一个 loading 实例，后续再次增加计数，也不增加实例
+// 只能显示第一个 loading 配置的文案和效果
+let queueCount = 0; // 当前队列 loading 数量
+let queueStatus = false; // 当前是否展示 loading 中
+
+function showQueueLoading(...args) {
+  if (queueCount > 0) {
+    if (!queueStatus) {
+      Toast.loading(...args);
+      queueStatus = true;
+    }
+  } else {
+    Toast.clear();
+    queueStatus = false;
+  }
+}
+
+Toast.queueLoading = (...args) => {
+  queueCount++;
+  showQueueLoading(...args);
+};
+
+Toast.queueClear = (...args) => {
+  queueCount--;
+  showQueueLoading(...args);
+};
+
 Toast.setDefaultOptions = (type, options) => {
   if (typeof type === 'string') {
     defaultOptionsMap[type] = options;

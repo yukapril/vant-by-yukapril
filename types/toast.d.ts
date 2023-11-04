@@ -41,6 +41,8 @@ export interface Toast {
   success(options?: ToastOptions | ToastMessage): VanToast;
   fail(options?: ToastOptions | ToastMessage): VanToast;
   clear(all?: boolean): void;
+  queueLoading(options?: ToastOptions | ToastMessage): VanToast;
+  queueClear(all?: boolean): void;
   install(): void;
   setDefaultOptions(
     type: ToastType | ToastOptions,
