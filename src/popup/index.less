@@ -10,6 +10,12 @@
     max-height: 100%;
     overflow-y: auto;
     background-color: @popup-background-color;
+    // 尝试修复 iOS 轮播卡顿问题 by yukapril
+    // https://www.shuzhiduo.com/A/gVdnWEGazW/
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
     transition: @popup-transition;
     -webkit-overflow-scrolling: touch;
 
