@@ -1,6 +1,6 @@
 {
   "name": "vant-by-yukapril",
-  "version": "2.13.2-beta.3",
+  "version": "2.13.2-beta.4",
   "description": "Mobile UI Components built on Vue",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -16,7 +16,7 @@
     "tag": "latest-v2"
   },
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
+    "registry": "http://nexus.unicompayment.com/repository/npm-hosted/"
   },
   "scripts": {
     "bootstrap": "yarn || npm i",

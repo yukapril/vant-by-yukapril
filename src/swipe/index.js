@@ -130,7 +130,7 @@ export default createComponent({
         backfaceVisibility: 'hidden',
       };
 
-      // 尝试修复 iOS 轮播卡顿问题 by yukapril
+      // 尝试修复 iOS 卡顿问题 by yukapril
       if (this.vertical) {
         // Y
         style.transform = `translate3D(0, ${this.offset}px, 0)`;

@@ -10,13 +10,14 @@
     max-height: 100%;
     overflow-y: auto;
     background-color: @popup-background-color;
-    // 尝试修复 iOS 轮播卡顿问题 by yukapril
-    // https://www.shuzhiduo.com/A/gVdnWEGazW/
+    // 尝试修复 iOS 卡顿问题 by yukapril
+    // https://www.cnblogs.com/zjzhome/p/4902568.html
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     transition: @popup-transition;
+    transform: translateZ(0);
     -webkit-overflow-scrolling: touch;
 
     &--center {
