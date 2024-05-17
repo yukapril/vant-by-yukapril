@@ -15,9 +15,6 @@
   "npm": {
     "tag": "latest-v2"
   },
-  "publishConfig": {
-    "registry": "http://nexus.unicompayment.com/repository/npm-hosted/"
-  },
   "scripts": {
     "bootstrap": "yarn || npm i",
     "dev": "vant-cli dev",
